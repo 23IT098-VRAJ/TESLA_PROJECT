@@ -1,0 +1,308 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 30px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ff0000;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+.product-section {
+    padding: 100px 0;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.product-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.product-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-button {
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+#hero {
+    background-color: #222;
+    color: #fff;
+    padding: 100px 0;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#model-s, #model-3, #model-x, #model-y {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+#model-s {
+    background-image: url('https://wallpapercat.com/w/full/2/1/9/9162-3840x2160-desktop-4k-tesla-model-s-wallpaper-image.jpg');
+}
+
+#model-3 {
+    background-image: url('https://www.hdcarwallpapers.com/walls/2023_tesla_model_3_4k-HD.jpg');
+}
+
+#model-x {
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/581/241/190/tesla-model-x-car-electric-car-tesla-motors-wallpaper-preview.jpg');
+}
+
+#model-y {
+    background-image: url('https://images4.alphacoders.com/998/998859.jpg');
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    header ul li a {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    .menu-toggle.open + ul {
+        display: flex;
+    }
+}
+
+/* Order Page & Details Page Styling */
+.order-page, .details-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 120px); /* Account for header and footer */
+}
+
+.order-page h1, .details-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Grid layout for order options */
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.order-option {
+    background-color: #222;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Form styling for both pages */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #ff0000;
+    outline: none;
+}
+
+/* CTA buttons styling */
+.order-page .cta-button,
+.details-page .cta-button {
+    display: inline-block;
+    width: auto;
+    min-width: 200px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ff0000;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px auto;
+    display: block;
+}
+
+.order-page .cta-button:hover,
+.details-page .cta-button:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments for order and details pages */
+@media (max-width: 768px) {
+    .order-page, .details-page {
+        padding: 20px 15px;
+    }
+
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .order-page h1, .details-page h1 {
+        font-size: 2rem;
+    }
+}
+
+

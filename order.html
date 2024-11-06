@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tesla - Tesla Clone</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/1024px-Tesla_Motors.svg.png" alt="Tesla Logo">
+                TESLA
+            </div>
+            <ul>
+                <li><a href="index.html#model-s">Model S</a></li>
+                <li><a href="index.html#model-3">Model 3</a></li>
+                <li><a href="index.html#model-x">Model X</a></li>
+                <li><a href="index.html#model-y">Model Y</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
+
+    <main class="order-page">
+        <h1>Order Your Tesla</h1>
+        
+        <div class="order-grid">
+            <div class="order-option">
+                <h2>Model S</h2>
+                <p>Starting at $74,990</p>
+                <img src="https://wallpapercat.com/w/full/2/1/9/9162-3840x2160-desktop-4k-tesla-model-s-wallpaper-image.jpg" alt="Tesla Model S" style="width: 100%; border-radius: 10px; margin: 20px 0;">
+                <a href="#configure-s" class="cta-button">Configure</a>
+            </div>
+
+            <div class="order-option">
+                <h2>Model 3</h2>
+                <p>Starting at $38,990</p>
+                <img src="https://www.hdcarwallpapers.com/walls/2023_tesla_model_3_4k-HD.jpg" alt="Tesla Model 3" style="width: 100%; border-radius: 10px; margin: 20px 0;">
+                <a href="#configure-3" class="cta-button">Configure</a>
+            </div>
+
+            <div class="order-option">
+                <h2>Model X</h2>
+                <p>Starting at $79,990</p>
+                <img src="https://c4.wallpaperflare.com/wallpaper/581/241/190/tesla-model-x-car-electric-car-tesla-motors-wallpaper-preview.jpg" alt="Tesla Model X" style="width: 100%; border-radius: 10px; margin: 20px 0;">
+                <a href="#configure-x" class="cta-button">Configure</a>
+            </div>
+
+            <div class="order-option">
+                <h2>Model Y</h2>
+                <p>Starting at $43,990</p>
+                <img src="https://images4.alphacoders.com/998/998859.jpg" alt="Tesla Model Y" style="width: 100%; border-radius: 10px; margin: 20px 0;">
+                <a href="#configure-y" class="cta-button">Configure</a>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <h2>Configure Your Tesla</h2>
+            <form id="order-form">
+                <div class="form-group">
+                    <label for="model">Select Model</label>
+                    <select id="model" name="model" required>
+                        <option value="">Choose a model</option>
+                        <option value="model-s">Model S</option>
+                        <option value="model-3">Model 3</option>
+                        <option value="model-x">Model X</option>
+                        <option value="model-y">Model Y</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Exterior Color</label>
+                    <select id="color" name="color" required>
+                        <option value="">Choose a color</option>
+                        <option value="pearl-white">Pearl White</option>
+                        <option value="solid-black">Solid Black</option>
+                        <option value="midnight-silver">Midnight Silver</option>
+                        <option value="deep-blue">Deep Blue</option>
+                        <option value="red">Red</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="interior">Interior</label>
+                    <select id="interior" name="interior" required>
+                        <option value="">Choose interior</option>
+                        <option value="black">All Black</option>
+                        <option value="white">Black and White</option>
+                        <option value="cream">Cream</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="cta-button">Continue to Payment</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tesla</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+
